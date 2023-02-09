@@ -1,9 +1,13 @@
 import React from 'react'
 import alekhImage from "../assets/alekh/alekh_1.svg";
 
-const Avatar = () => {
+interface IAvatar {
+    imgSrc: string;
+}
+
+const Avatar = ({ imgSrc }: IAvatar) => {
     return (
-        <img className='absolute bottom-[10%] left-[10%]' src={alekhImage}></img>
+        <img className='absolute bottom-[10%] left-[6%]' src={imgSrc}></img>
     )
 }
 
