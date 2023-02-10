@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.slideInTop {
+  animation: 0.5s ease-out 0s 1 slideInFromTop;
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-38%);
+  }
+  50% {
+    transform: translateY(7%);
+  }
+  65% {
+    transform: translateY(3%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.zoomOut {
+  animation: 0.5s ease-out 0s 1 zoomOutAnime;
+}
+
+@keyframes zoomOutAnime {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: translateY(1);
+  }
+  65% {
+    transform: translateY(1);
+  }
+  100% {
+    transform: translateY(1);
+  }
+}
