@@ -19,6 +19,21 @@ const CaseStudy = ({ children }: ICaseStudy) => {
     }
   }
 
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowRight') {
+        nextHandler()
+      }
+      if (e.key === 'ArrowLeft') {
+        prevHandler()
+      }
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [currentPage])
+
   const progressWidth = `${(currentPage + 1) / children.length * 100}%`
   return (
     <div>

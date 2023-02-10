@@ -1,13 +1,17 @@
-import React from 'react'
-import alekhImage from "../assets/alekh/alekh_1.svg";
-
+import money from '../assets/rupee.svg'
 interface IAvatar {
     imgSrc: string;
+    addMoney?: boolean;
 }
 
-const Avatar = ({ imgSrc }: IAvatar) => {
+const Avatar = ({ imgSrc, addMoney }: IAvatar) => {
     return (
-        <img className='absolute bottom-[10%] left-[6%]' src={imgSrc}></img>
+        <div className='absolute bottom-[10%] left-[6%]'>
+            <img src={imgSrc}></img>
+            {
+                addMoney && <img src={money} className='absolute top-[-10px] left-[0%]'></img>
+            }
+        </div>
     )
 }
 
